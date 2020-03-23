@@ -5,10 +5,11 @@ import './Name.css';
 function Name() {
   return (
     <div className="Name">
-      <Letter value="A" />
-      {/* <Letter value=" " />
-      <Letter value="Q" />
-      <Letter value="X" /> */}
+      <Letter value="Y" />
+      <Letter value="O" />
+      <Letter value="S" />
+      <Letter value="H" />
+      <Letter value="I" />
     </div>
   );
 }
