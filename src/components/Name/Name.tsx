@@ -1,11 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
+import Letter from '../Letter/Letter';
 import './Name.css';
 
 function Name() {
   return (
     <div className="Name">
-      <img src={logo} className="Name-logo" alt="" />
+      <Letter value="A" />
+      {/* <Letter value=" " />
+      <Letter value="Q" />
+      <Letter value="X" /> */}
     </div>
   );
 }
