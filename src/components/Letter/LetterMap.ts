@@ -165,7 +165,7 @@ const letterMap: LetterMap = {
     1: [true, false, false, false, true],
     2: [true, false, true, false, true],
     3: [true, false, true, false, true],
-    4: [false, true, true, true, false]
+    4: [false, true, false, true, false]
   },
   X: {
     0: [true, false, false, false, true],

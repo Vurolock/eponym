@@ -2,16 +2,17 @@ import React from 'react';
 import Letter from '../Letter/Letter';
 import './Name.css';
 
-function Name() {
-  return (
-    <div className="Name">
-      <Letter value="Y" />
-      <Letter value="O" />
-      <Letter value="S" />
-      <Letter value="H" />
-      <Letter value="I" />
-    </div>
-  );
-}
+type NameProps = {
+  value: string;
+};
+
+const Name = (props: NameProps) => {
+  const name = props.value
+    .toUpperCase()
+    .split('')
+    .map((letter, i) => <Letter value={letter} key={i} />);
+
+  return <div className="Name">{name}</div>;
+};
 
 export default Name;

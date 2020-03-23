@@ -9,12 +9,10 @@ type LetterProps = {
 };
 
 const Letter = (props: LetterProps): JSX.Element => {
-  const propsLetter = props.value.toUpperCase();
-
   const pixels = (rowNum: number): JSX.Element[] => {
-    return [...Array(letterMap[propsLetter][0].length)].map((element, i) => {
+    return [...Array(letterMap[props.value][0].length)].map((element, i) => {
       for (const letter in letterMap) {
-        if (letter === propsLetter) {
+        if (letter === props.value) {
           return letterMap[letter][rowNum][i] ? (
             <div className="Letter-pixel" key={i}>
               <img src={egg} className="Letter-image" alt="" />
@@ -28,7 +26,7 @@ const Letter = (props: LetterProps): JSX.Element => {
     });
   };
 
-  const rows = [...Array(Object.keys(letterMap[propsLetter]).length)].map(
+  const rows = [...Array(Object.keys(letterMap[props.value]).length)].map(
     (element, i) => (
       <div className="Letter-row" key={i}>
         {pixels(i)}
