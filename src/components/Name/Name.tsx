@@ -1,6 +1,6 @@
 import React from 'react';
 import Letter from '../Letter/Letter';
-import './Name.css';
+import './Name.scss';
 import image from '../Letter/egg.png';
 
 type NameProps = {

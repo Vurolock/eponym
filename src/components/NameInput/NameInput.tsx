@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './NameInput.scss';
 
 type NameInputProps = {
-  textState: [string, React.Dispatch<React.SetStateAction<string>>];
+  textHandler: (text: string) => void;
 };
 
 const NameInput = (props: NameInputProps) => {
-  const text = props.textState[0];
-  const setText = props.textState[1];
+  const [text, setText] = useState('');
+
+  const changeHandler = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    const input = event.target.value;
+    if (/^[a-z.\s]{0,1}$/i.test(input.charAt(input.length - 1))) {
+      setText(input);
+      props.textHandler(input);
+    } else {
+      text.slice(0, -1);
+    }
+  };
 
   return (
     <div>
@@ -15,9 +24,7 @@ const NameInput = (props: NameInputProps) => {
         rows={4}
         cols={20}
         value={text}
-        onChange={event => {
-          setText(event.target.value);
-        }}
+        onChange={event => changeHandler(event)}
       />
     </div>
   );

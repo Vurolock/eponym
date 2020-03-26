@@ -1,21 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.scss';
-// import Name from '../Name/Name';
+import Name from '../Name/Name';
 import NameInput from '../NameInput/NameInput';
 
 function App() {
-  const [text, setText] = useState('andrew keller');
+  const [lines, setLines] = useState([<Name value="a" key={0} />]);
 
-  useEffect(() => {
-    console.log(text.split('\n'));
-  });
+  const textHandler = (text: string) => {
+    setLines(
+      text.split('\n').map((line, i) => {
+        return <Name value={line} key={i} />;
+      })
+    );
+  };
 
   return (
     <div className="App">
-      <header className="App-header">
-        {/* <Name value="Andrew Keller" /> */}
-      </header>
-      <NameInput textState={[text, setText]} />
+      <header className="App-header">{lines}</header>
+      <NameInput textHandler={textHandler} />
     </div>
   );
 }
