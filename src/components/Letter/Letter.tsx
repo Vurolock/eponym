@@ -1,10 +1,10 @@
 import React from 'react';
-import image from './egg.png';
 import './Letter.scss';
 import letterMap from './LetterMap';
 
 type LetterProps = {
   value: string;
+  image: string;
 };
 
 const Letter = (props: LetterProps): JSX.Element => {
@@ -14,7 +14,7 @@ const Letter = (props: LetterProps): JSX.Element => {
         if (letter === props.value) {
           return letterMap[letter][rowNum][i] ? (
             <div className="Letter-pixel" key={i}>
-              <img src={image} className="Letter-image" alt="" />
+              <img src={props.image} className="Letter-image shake" alt="" />
             </div>
           ) : (
             <div className="Letter-pixel" key={i} />
