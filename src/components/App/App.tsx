@@ -18,6 +18,15 @@ function App() {
     <div className="App">
       <header className="App-header">{lines}</header>
       <NameInput textHandler={textHandler} />
+      <footer>
+        <a
+          href="https://github.com/Vurolock/eponym"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          github
+        </a>
+      </footer>
     </div>
   );
 }

@@ -11,4 +11,14 @@
     align-items: center;
     padding: 15px;
   }
+
+  footer {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+
+    a {
+      color: #b9ffc4;
+    }
+  }
 }
