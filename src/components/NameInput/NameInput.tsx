@@ -10,7 +10,9 @@ const NameInput = (props: NameInputProps) => {
 
   const changeHandler = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     const input = event.target.value;
-    if (/^[a-z.\s]{0,1}$/i.test(input.charAt(input.length - 1))) {
+    const charRegex = /^[a-z.\s]{0,1}$/i; // exactly 0 or 1 letter, peroid, or whitespace
+
+    if (charRegex.test(input.charAt(input.length - 1))) {
       setText(input);
       props.textHandler(input);
     } else {
@@ -24,6 +26,7 @@ const NameInput = (props: NameInputProps) => {
         rows={4}
         cols={20}
         value={text}
+        autoFocus={true}
         onChange={event => changeHandler(event)}
       />
     </div>
