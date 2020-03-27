@@ -4,7 +4,7 @@ import Name from '../Name/Name';
 import NameInput from '../NameInput/NameInput';
 
 function App() {
-  const [lines, setLines] = useState([<Name value="a" key={0} />]);
+  const [lines, setLines] = useState([<Name value="eponym" key={0} />]);
 
   const textHandler = (text: string) => {
     setLines(

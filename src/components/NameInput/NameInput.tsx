@@ -6,7 +6,7 @@ type NameInputProps = {
 };
 
 const NameInput = (props: NameInputProps) => {
-  const [text, setText] = useState('');
+  const [text, setText] = useState('eponym');
 
   const changeHandler = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     const input = event.target.value;
