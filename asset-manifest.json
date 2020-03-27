@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/eponym/static/css/main.66fd51cc.chunk.css",
-    "main.js": "/eponym/static/js/main.36f73fc3.chunk.js",
-    "main.js.map": "/eponym/static/js/main.36f73fc3.chunk.js.map",
+    "main.css": "/eponym/static/css/main.36baac56.chunk.css",
+    "main.js": "/eponym/static/js/main.d0b65b41.chunk.js",
+    "main.js.map": "/eponym/static/js/main.d0b65b41.chunk.js.map",
     "runtime-main.js": "/eponym/static/js/runtime-main.eda4f706.js",
     "runtime-main.js.map": "/eponym/static/js/runtime-main.eda4f706.js.map",
     "static/js/2.edc5aae1.chunk.js": "/eponym/static/js/2.edc5aae1.chunk.js",
     "static/js/2.edc5aae1.chunk.js.map": "/eponym/static/js/2.edc5aae1.chunk.js.map",
     "index.html": "/eponym/index.html",
-    "precache-manifest.7b8c8aa57018fdb0d6bfbd6f97975481.js": "/eponym/precache-manifest.7b8c8aa57018fdb0d6bfbd6f97975481.js",
+    "precache-manifest.00e974a512c6c999bc40a3b276a01e47.js": "/eponym/precache-manifest.00e974a512c6c999bc40a3b276a01e47.js",
     "service-worker.js": "/eponym/service-worker.js",
-    "static/css/main.66fd51cc.chunk.css.map": "/eponym/static/css/main.66fd51cc.chunk.css.map",
+    "static/css/main.36baac56.chunk.css.map": "/eponym/static/css/main.36baac56.chunk.css.map",
     "static/js/2.edc5aae1.chunk.js.LICENSE.txt": "/eponym/static/js/2.edc5aae1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.eda4f706.js",
     "static/js/2.edc5aae1.chunk.js",
-    "static/css/main.66fd51cc.chunk.css",
-    "static/js/main.36f73fc3.chunk.js"
+    "static/css/main.36baac56.chunk.css",
+    "static/js/main.d0b65b41.chunk.js"
   ]
 }
