@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import './App.scss';
-import Name from '../Name/Name';
-import NameInput from '../NameInput/NameInput';
+import Text from '../Text/Text';
+import TextInput from '../TextInput/TextInput';
 
 function App() {
-  const [lines, setLines] = useState([<Name value="eponym" key={0} />]);
+  const [lines, setLines] = useState([<Text value="eponym" key={0} />]);
 
   const textHandler = (text: string) => {
     setLines(
       text.split('\n').map((line, i) => {
-        return <Name value={line} key={i} />;
+        return <Text value={line} key={i} />;
       })
     );
   };
@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">{lines}</header>
-      <NameInput textHandler={textHandler} />
+      <TextInput textHandler={textHandler} />
       <footer>
         <a
           href="https://github.com/Vurolock/eponym"

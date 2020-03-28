@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
-import './NameInput.scss';
+import './TextInput.scss';
 
-type NameInputProps = {
+type TextInputProps = {
   textHandler: (text: string) => void;
 };
 
-const NameInput = (props: NameInputProps) => {
+const TextInput = (props: TextInputProps) => {
   const [text, setText] = useState('eponym');
 
   const changeHandler = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     const input = event.target.value;
-    const charRegex = /^[a-z.\s]{0,1}$/i; // exactly 0 or 1 letter, peroid, or whitespace
+    const characterRegex = /^[a-z0-9.,!?/:;\-_\s]{0,1}$/i; // allowed characteracters
 
-    if (charRegex.test(input.charAt(input.length - 1))) {
+    if (characterRegex.test(input.charAt(input.length - 1))) {
       setText(input);
       props.textHandler(input);
     } else {
@@ -33,4 +33,4 @@ const NameInput = (props: NameInputProps) => {
   );
 };
 
-export default NameInput;
+export default TextInput;
