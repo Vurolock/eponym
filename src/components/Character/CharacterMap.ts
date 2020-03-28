@@ -5,7 +5,7 @@ type CharacterMap = {
 };
 
 const characterMap: CharacterMap = {
-  // Characters
+  // LETTERS
   A: {
     0: [false, true, true, false],
     1: [true, false, false, true],

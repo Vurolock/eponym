@@ -10,7 +10,7 @@ const TextInput = (props: TextInputProps) => {
 
   const changeHandler = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     const input = event.target.value;
-    const characterRegex = /^[a-z0-9.,!?/:;\-_\s]{0,1}$/i; // allowed characteracters
+    const characterRegex = /^[a-z0-9.,!?/:;\-_\s]{0,1}$/i; // allowed characters
 
     if (characterRegex.test(input.charAt(input.length - 1))) {
       setText(input);
