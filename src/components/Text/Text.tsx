@@ -1,7 +1,7 @@
 import React from 'react';
 import Character from '../Character/Character';
 import './Text.scss';
-import image from '../Character/egg.png';
+import image from '../Character/AAAA.webp';
 
 type TextProps = {
   value: string;
